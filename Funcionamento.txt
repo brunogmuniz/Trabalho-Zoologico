@@ -1,0 +1,65 @@
+Bruno Muniz
+09/07/2024
+
+
+A Main do codigo funciona com um sistema de Do/While que executa o codigo enquanto o usuario não sair.
+Existem  variaveis Globais que fazem a verificação de quantos animais foram registrados para melhor controle das funções
+
+Todas as funções tem um SISTEM("clr") PARA MELHORAR A INTERFACE
+
+o usuario possui 4 opçoes principais
+
+a função REGISTRO 
+-Recebe por parametro a struct animal
+-Recebe dados do animal do usuário e insere na struct principal, 
+-Faz a Verificação se o código do animal já existe, caso sim manda inserir novamente, atraves de um IF. 
+-Atualiza o contador de animais(Qtd).
+
+a função PESQUISA
+-Recebe por parametro a struct animal
+-Dependendo da escolha, pesquisa por raça ou sexo.
+-Exibe os animais que atendem ao critério escolhido.
+-Utiliza IF e Laços para fazer as verificações.
+-Utiliza a função da string.h strcmp para fazer o comparativo das raças.
+
+a FUNÇÃO RELATORIO
+-Utiliza um laço para exibir todos os animais registrados até o momento.
+-Laço exibi todas as informações de cada animal inserido até o momento.
+-Aqui o uso da variavel global "QTD" é essencial.
+
+a função ANIMAIS POR SEXO
+-Conta quantos machos e fêmeas existem.
+-Calcula a media de idade para machos e femeas, utilizando laços.
+	*VARIAVEIS QUE FALEI NO VIDEO, PARA NAO SE CONFUNDIR.
+	 b, c: Usadas para os controles do laço.
+	 esc: Para a escolha do usuario(char).
+	 totalf, totalm: Calcula quantos machos e fêmeas tem.
+         idadef, idadem: Variavel que guarda as medias de idades.
+         idadesf, idadesm: Variavel que guarda a soma das idades;
+
+-Sair: Passa a variavel saiu de 0 para 1, acabando o codigo.
+
+Resumindo o codigo funciona atraves de uma main que manda o usuario conforme o numero digitado para 
+a função escolhida, as funções utilizam de laços e ifs que consultam a struct ANIMAL, e oferecem a 
+informação requerida para cada topico. 
+
+Getchar e fflush limpam a função direto.
+
+Considerações:
+-Posso ter me perdido e criado mais variaveis que necessario, porem quis garantir que 
+todos os processos estavam funcionais.
+
+-Acredito que a utilização de funções facilitou o processo de criação, optei por nao usar
+função nos "sub-topicos" pois nao me garanto fazendo a passagem de função para função. 
+Nao tinha certeza que daria certo, por isso optei de fazer a passagem apenas Main-Função]
+
+-O Enunciado não explica direito oque seria o "Relatorio" então imaginei que seria apenas
+exibir todos os animais registrados.
+
+-Sobre os ifs extra na função 4, é para adcionar o valor de 1, caso ainda nao possua animais de algum genero, pois antes disso chegava nessa hora é o codigo quebrava, 
+com a adição dos ifs caso alguma das variaveis seja 0, o codigo nao quebra mais.s
+
+
+-Não podem existir Estrelas do Mar nesse zoologico, pois as mesmas nao possuim Genero, quebrando o codigo.
+
+
